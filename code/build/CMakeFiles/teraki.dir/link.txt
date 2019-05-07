@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/teraki.dir/main.cpp.o CMakeFiles/teraki.dir/PointCloud.cpp.o  -o teraki 

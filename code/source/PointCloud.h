@@ -8,6 +8,10 @@
 #include <cstdlib>
 #include <cstring>
 #include <string>
+#include <iostream>
+#include <fstream>
+#include <utility>
+#include <algorithm>
 
 using namespace std;
 
@@ -15,20 +19,22 @@ using namespace std;
 #define CODE_SOURCE_POINTCLOUD_H_
 
 class PointCloud {
-private:
+
+public:
 	double **points;    //array of array
 	int size;
 
-public:
+
 	PointCloud(string inputFile);
 	virtual ~PointCloud();
 
-	int addTwoThings(int a, int b);
+	void readPLY(string filename);
+	//double * readPLY(string filename);
 
 	/**
 	 *
 	 */
-	double calculateDistance(PointCloud *x);
+	double ** pairing(PointCloud *x,string outputFileName);
 };
 
 #endif /* CODE_SOURCE_POINTCLOUD_H_ */

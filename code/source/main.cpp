@@ -9,15 +9,31 @@
 #include <cstdlib>
 #include <cstring>
 #include <iostream>
+#include <math.h>
+#include <fstream>
+#include <array>
 
 #include "PointCloud.h"
 
 using namespace std;
 
 int main (int argc, char *argv[]) {
-	PointCloud *pc = new PointCloud();
-	int result = pc->addTwoThings(234, 567);
-	cout << "result is " << result << endl;
+	PointCloud *pc_A = new PointCloud("input/Car_XYZI_decompressed_ASCII_A.ply");
+	cout << "read A" << endl;
+	PointCloud *pc_B = new PointCloud("input/Car_XYZI_decompressed_ASCII_B.ply");
+	cout << "read B" << endl;
+	PointCloud *pc_C = new PointCloud("input/Car_XYZI_decompressed_ASCII_C.ply");
+	cout << "read C" << endl;
+	PointCloud *pc_uncompressed = new PointCloud("input/Car_XYZI_uncompressed_ASCII.ply");
+	cout << "read uncompressed" << endl;
+
+	//PointCloud *pc_A = PointCloud.readPLY("input/Car_XYZI_decompressed_ASCII_A.ply");
+	//PointCloud *pc_uncompressed = PointCloud.readPLY("input/Car_XYZI_uncompressed_ASCII.ply")
+
+	//double **distance_A = pc_uncompressed->pairing(pc_uncompressed);
+	double **distance_A = pc_uncompressed->pairing(pc_A, "output/dist_A.txt");
+	double **distance_B = pc_uncompressed->pairing(pc_B, "output/dist_B.txt");
+	double **distance_C = pc_uncompressed->pairing(pc_C, "output/dist_C.txt");
 
 	return 0;
 }

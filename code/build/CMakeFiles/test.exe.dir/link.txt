@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/test.exe.dir/main.cpp.o CMakeFiles/test.exe.dir/PointCloud.cpp.o  -o test.exe 

@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/michelle/Documents/car_tracking/Teraki3DRecruitmentTestApr19/code/source/PointCloud.cpp
+PointCloud.h
+/home/michelle/Documents/car_tracking/Teraki3DRecruitmentTestApr19/code/source/PointCloud.h
+
+/home/michelle/Documents/car_tracking/Teraki3DRecruitmentTestApr19/code/source/PointCloud.h
+

@@ -28,8 +28,9 @@ PointCloud::~PointCloud() {
 }
 
 
+
+// read a .ply file and convert the location data to 2D array
 void PointCloud::readPLY(string filename){
-//double ** readPLY(string filename){
 	ifstream ifile(filename);
 	string line("");
 	string vertexCountPattern = "element vertex ";
@@ -80,18 +81,18 @@ void PointCloud::readPLY(string filename){
 	} else {
 		cout << "ERROR: could not open the file " << filename << endl;
 	}
-//return points;
 }
 
-//double PointCloud::calculateDistance(PointCloud *x) {
 
+
+
+//For each point in a location data set, find the corresponding point in a second location data set by searching for smallest distance.
+//Write the matching location points and their distance to a .txt file
 double ** PointCloud::pairing(PointCloud *pc2,string outputFileName){
 	cout << "paring"<< endl;
 	double **distanceArray;
 	distanceArray = new double*[size];
 
-	//cout << "size of pc2 = " << pc2->size << endl;
-	//cout << "size of me = " << size << endl;
 
 	for (int i=0; i < size; i++){
 		//cout << i << endl;

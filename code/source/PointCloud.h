@@ -24,17 +24,13 @@ public:
 	double **points;    //array of array
 	int size;
 
-
 	PointCloud(string inputFile);
 	virtual ~PointCloud();
 
 	void readPLY(string filename);
-	//double * readPLY(string filename);
 
-	/**
-	 *
-	 */
-	double ** pairing(PointCloud *x,string outputFileName);
+
+	double ** pairing(PointCloud *pc2,string outputFileName);
 };
 
 #endif /* CODE_SOURCE_POINTCLOUD_H_ */

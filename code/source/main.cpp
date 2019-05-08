@@ -27,10 +27,6 @@ int main (int argc, char *argv[]) {
 	PointCloud *pc_uncompressed = new PointCloud("input/Car_XYZI_uncompressed_ASCII.ply");
 	cout << "read uncompressed" << endl;
 
-	//PointCloud *pc_A = PointCloud.readPLY("input/Car_XYZI_decompressed_ASCII_A.ply");
-	//PointCloud *pc_uncompressed = PointCloud.readPLY("input/Car_XYZI_uncompressed_ASCII.ply")
-
-	//double **distance_A = pc_uncompressed->pairing(pc_uncompressed);
 	double **distance_A = pc_uncompressed->pairing(pc_A, "output/dist_A.txt");
 	double **distance_B = pc_uncompressed->pairing(pc_B, "output/dist_B.txt");
 	double **distance_C = pc_uncompressed->pairing(pc_C, "output/dist_C.txt");

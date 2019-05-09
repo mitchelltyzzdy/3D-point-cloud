@@ -43,7 +43,7 @@ void PointCloud::readPLY(string filename){
 			getline (ifile, line);
 			//cout << line << endl;
 			if (line.find(vertexCountPattern) != string::npos) {
-				cout << "FOUND VERTEX COUNT!!" << endl;
+				//cout << "FOUND VERTEX COUNT!!" << endl;
 				string numVertices = line.substr(vertexCountPattern.length(), string::npos);
 				size = std::atoi(numVertices.c_str());  // or use std::stoi()
 				cout << "num vertices is " << size << endl;

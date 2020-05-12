@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# ## Teraki Assignment (michelle tang, may 2019)
+# ## 3D point cloud (michelle tang, may 2019)
 
 # ### Data Analysis with python
 
